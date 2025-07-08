@@ -93,7 +93,7 @@ Bu oyun özellikle aşağıdaki becerileri geliştirmeye odaklanır:
 ### ⭐ Orta Seviye  
 - Toplama: 10-50 arası sayılar
 - Çıkarma: 20-100 arası sayılar
-- Çarpma: Rakam × İki basamaklı sayı (2-9 × 10-99)
+- Çarpma: 2-12 × 2-20 (çarpım tablosu + küçük iki basamaklı)
 - Bölme: 5-25 arası sonuçlar
 
 ### 🔥 Zor Seviye

@@ -95,7 +95,7 @@ const MathGame: React.FC<MathGameProps> = ({ operation, onNavigate, onProgress }
         medium: {
           addition: { min1: 10, max1: 50, min2: 10, max2: 50 },
           subtraction: { min1: 20, max1: 100, min2: 5, max2: 50 },
-          multiplication: { min1: 2, max1: 9, min2: 10, max2: 99 }, // Rakam × İki basamaklı
+          multiplication: { min1: 2, max1: 12, min2: 2, max2: 20 }, // 2-12 × 2-20 arası
           division: { minAnswer: 5, maxAnswer: 25, minDivisor: 2, maxDivisor: 12 }
         },
         hard: {
@@ -389,7 +389,7 @@ const MathGame: React.FC<MathGameProps> = ({ operation, onNavigate, onProgress }
                     { 
                       value: 'medium', 
                       label: 'Orta', 
-                      desc: operation === 'multiplication' ? 'Rakam × İki basamak' : 'Dengeli seviye', 
+                      desc: operation === 'multiplication' ? '2-12 × 2-20' : 'Dengeli seviye', 
                       color: 'yellow', 
                       icon: '⭐' 
                     },
