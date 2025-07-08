@@ -87,19 +87,19 @@ Bu oyun özellikle aşağıdaki becerileri geliştirmeye odaklanır:
 ### 🌱 Kolay Seviye
 - Toplama: 1-10 arası sayılar
 - Çıkarma: 5-20 arası sayılar
-- Çarpma: 1×1 ile 5×10 arası
+- Çarpma: 2-9 arası sayılar (1 ile çarpma yok!)
 - Bölme: 1-10 arası sonuçlar
 
 ### ⭐ Orta Seviye  
 - Toplama: 10-50 arası sayılar
 - Çıkarma: 20-100 arası sayılar
-- Çarpma: 5×1 ile 12×12 arası
+- Çarpma: Rakam × İki basamaklı sayı (2-9 × 10-99)
 - Bölme: 5-25 arası sonuçlar
 
 ### 🔥 Zor Seviye
 - Toplama: 50-200 arası sayılar
 - Çıkarma: 100-500 arası sayılar  
-- Çarpma: 10×10 ile 25×25 arası
+- Çarpma: İki basamaklı × İki basamaklı (10-99 × 10-99)
 - Bölme: 15-50 arası sonuçlar
 
 ## 🏆 Rozet Sistemi

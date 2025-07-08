@@ -89,19 +89,19 @@ const MathGame: React.FC<MathGameProps> = ({ operation, onNavigate, onProgress }
         easy: {
           addition: { min1: 1, max1: 10, min2: 1, max2: 10 },
           subtraction: { min1: 5, max1: 20, min2: 1, max2: 10 },
-          multiplication: { min1: 1, max1: 5, min2: 1, max2: 10 },
+          multiplication: { min1: 2, max1: 9, min2: 2, max2: 9 }, // 2-9 arası çarpma
           division: { minAnswer: 1, maxAnswer: 10, minDivisor: 1, maxDivisor: 5 }
         },
         medium: {
           addition: { min1: 10, max1: 50, min2: 10, max2: 50 },
           subtraction: { min1: 20, max1: 100, min2: 5, max2: 50 },
-          multiplication: { min1: 5, max1: 12, min2: 1, max2: 12 },
+          multiplication: { min1: 2, max1: 9, min2: 10, max2: 99 }, // Rakam × İki basamaklı
           division: { minAnswer: 5, maxAnswer: 25, minDivisor: 2, maxDivisor: 12 }
         },
         hard: {
           addition: { min1: 50, max1: 200, min2: 50, max2: 200 },
           subtraction: { min1: 100, max1: 500, min2: 20, max2: 200 },
-          multiplication: { min1: 10, max1: 25, min2: 10, max2: 25 },
+          multiplication: { min1: 10, max1: 99, min2: 10, max2: 99 }, // İki basamaklı × İki basamaklı
           division: { minAnswer: 15, maxAnswer: 50, minDivisor: 5, maxDivisor: 20 }
         }
       };
@@ -379,9 +379,27 @@ const MathGame: React.FC<MathGameProps> = ({ operation, onNavigate, onProgress }
                 <h3 className="text-sm font-semibold text-gray-700">Zorluk Seviyesi</h3>
                 <div className="grid grid-cols-3 gap-1">
                   {[
-                    { value: 'easy', label: 'Kolay', desc: 'Başlangıç seviyesi', color: 'green', icon: '🌱' },
-                    { value: 'medium', label: 'Orta', desc: 'Dengeli seviye', color: 'yellow', icon: '⭐' },
-                    { value: 'hard', label: 'Zor', desc: 'Uzman seviyesi', color: 'red', icon: '🔥' }
+                    { 
+                      value: 'easy', 
+                      label: 'Kolay', 
+                      desc: operation === 'multiplication' ? '2-9 × 2-9' : 'Başlangıç seviyesi', 
+                      color: 'green', 
+                      icon: '🌱' 
+                    },
+                    { 
+                      value: 'medium', 
+                      label: 'Orta', 
+                      desc: operation === 'multiplication' ? 'Rakam × İki basamak' : 'Dengeli seviye', 
+                      color: 'yellow', 
+                      icon: '⭐' 
+                    },
+                    { 
+                      value: 'hard', 
+                      label: 'Zor', 
+                      desc: operation === 'multiplication' ? 'İki basamak × İki basamak' : 'Uzman seviyesi', 
+                      color: 'red', 
+                      icon: '🔥' 
+                    }
                   ].map((level) => (
                     <button
                       key={level.value}
